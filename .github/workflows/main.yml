@@ -12,8 +12,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Set environment variable
+        run: echo "MY_ENV_VAR=HelloWorld" >> $GITHUB_ENV
+
       - name: Print environment variable
-        run: echo "Environment variable value: $MY_SECRET_VAR"
+        run: echo "Environment variable value: $MY_ENV_VAR"
 
       - name: Print secret variable
         run: echo "Secret variable value: ${{ secrets.MY_SECRET_VAR }}"
