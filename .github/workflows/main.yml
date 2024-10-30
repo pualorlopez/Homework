@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Print environment variable
-        run: echo "Secret variable value: ${{ secrets.MY_SECRET_VAR }}"
+        run: echo "Environment variable value: $MY_SECRET_VAR"
 
       - name: Print secret variable
         run: echo "Secret variable value: ${{ secrets.MY_SECRET_VAR }}"
