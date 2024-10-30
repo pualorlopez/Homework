@@ -1,1 +1,19 @@
+name: Pull Request Action
 
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Print environment variable
+        run: echo "Environment variable value: $MY_ENV_VAR"
+
+      - name: Print secret variable
+        run: echo "Secret variable value: ${{ secrets.MY_SECRET_VAR }}"
